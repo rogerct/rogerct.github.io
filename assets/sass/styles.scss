@@ -8,7 +8,7 @@
 }
 /*===== Colores =====*/
 :root{
-    --first-color: #5361FF;
+    --first-color: #34385A;
     --white-color: #FAFAFF;
     --dark-color: #2a3b47;
     --text-color: #697477;
@@ -211,7 +211,10 @@ img{
         width: 295px;
     }
 }
-
+#canvasDiv {
+    z-index: 0;
+   
+}
 /* ===== ABOUT =====*/
 .about{
     &__container{

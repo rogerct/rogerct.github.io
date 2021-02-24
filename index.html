@@ -5,23 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="assets/css/styles.css">
-
+        <!-- <meta property="og:image" content="link de la imatge" /> -->
+        
+        <meta property="og:description" content="Portfolio -- Full Stack Developer" />
+        
+        <meta property="og:url" content="http://wwww.rogerct.github.io" />
+        
+        <meta property="og:title" content="Roger Comas Torres" />
         <!-- box and favic  -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         <script src="https://kit.fontawesome.com/c2adaf2c4c.js" crossorigin="anonymous"></script>
         <link rel="shortcut icon" type="image/png" href="/assets/img/icono.png" />
-        
+            <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+
         <title>Roger Comas Torres</title>
     </head>
     <body>
         <!--header-->
+        <div class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
                     <a href="#" class="nav__logo">Roger Comas</a>
                     
                 </div>
-
+                
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
@@ -36,23 +46,24 @@
                         </ul> -->
                     </ul>
                 </div>
-
+                
                 <div class="nav__toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>
                 </div>
             </nav>
         </header>
-
+        
         <main class="l-main">
             <!--home-->
             <section class="home" id="home">
                 <div class="home__container bd-grid">
                     <h1 class="home__title"><span>Roger<br>Comas</span></h1>
-
+                    
                     <div class="home__scroll">
                         <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
                     </div>
-
+                    
+                    <!-- <div id="canvasDiv"></div> -->
                     <img src="assets/img/fotoperfil.png" alt="" class="home__img">
                 </div>
             </section>
@@ -61,7 +72,7 @@
             <section class="about section" id="about">
                 <h2 class="section-title">About</h2>
 
-                <div class="about__container bd-grid">
+                <div class="about__container | bd-grid">
                     <div class="about__img">
                         <img src="assets/img/icono.png" alt="">
                     </div>
@@ -230,7 +241,13 @@
         <!-- scripts -->
         <script src="https://unpkg.com/scrollreveal"></script>
 
-        
+        <script src="assets/js/p5.js"></script>
         <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        jQuery("body").prepend('<div id="preloader">Loading...</div>');
+        jQuery(document).ready(function () {
+            jQuery("#preloader").remove();
+        });
+    </script>
     </body>
 </html>

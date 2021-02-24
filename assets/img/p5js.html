@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P5.js animation</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+
+</head>
+
+<body>
+    <script>
+        function setup() {
+            createCanvas(400, 400, WEBGL)
+            angleMode(DEGREES)
+        }
+
+        function draw() {
+            background(30)
+
+            rotateX(60)
+
+            noFill()
+            stroke(255)
+
+            for (var i = 0; i < 50; i++) {
+
+                var r = map(sin(frameCount / 2), -1, 1, 100, 200)
+                var g = map(i, 0, 50, 100, 200)
+                var b = map(cos(frameCount), -1, 1, 200, 100)
+
+                stroke(r, g, b)
+
+                rotate(frameCount / 80)
+
+                beginShape()
+                for (var j = 0; j < 360; j += 60) {
+                    var rad = i * 3
+                    var x = rad * cos(j)
+                    var y = rad * sin(j)
+                    var z = sin(frameCount * 2 + i * 5) * 50
+
+                    vertex(x, y, z)
+                }
+                endShape(CLOSE)
+            }
+        }
+    </script>
+</body>
+
+</html>
