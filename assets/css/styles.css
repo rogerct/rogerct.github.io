@@ -240,6 +240,7 @@ width: 30% !important;
   height: auto;
   border-radius: 40%;
   margin-bottom: 10px;
+  z-index: 999999;
 
 }
 #canvasDiv{
@@ -259,6 +260,7 @@ width: 30% !important;
   height: auto;
   border-radius: 50%;
   margin-bottom: 10px;
+  
 
 }
 
@@ -487,10 +489,11 @@ width: 30% !important;
         width: 524px;
         right: 10%;
     }
-    /* #canvasDiv{
-        width: 10%;
-        height: 10%;
-    } */
+    #canvasDiv{
+        /* width: 10%;
+        height: 10%; */
+        z-index: 9999;
+    }
     .about__container{
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
@@ -535,4 +538,10 @@ width: 30% !important;
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+@media (max-width: 1024px) {
+#canvasDiv {
+display: none;
+}
 }
